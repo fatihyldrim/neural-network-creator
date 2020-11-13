@@ -1,0 +1,273 @@
+  .autogrid > * {
+    background: transparent;
+    padding: 10px;
+    float: left;
+    color: #fff;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .autogrid p {
+    background-color: #F1654C;
+    width: 50px !important;
+    height: 50px;
+    border-radius: 365px;
+    color: transparent;
+  }
+
+  /*------------------MAX COL 1---------------------*/
+  .autogrid > * {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  [class] body .autogrid.max-col-1 > * {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  /*------------------MAX COL 2---------------------*/
+  [class] body .autogrid.max-col-2 > *:first-child:nth-last-child(n+2), .autogrid > *:first-child:nth-last-child(n+2), [class] body .autogrid.max-col-2 > *:first-child:nth-last-child(n+2) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+2) ~ * {
+    width: 49.5%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-2 > *:first-child:nth-last-child(n+2),
+  .autogrid > *:first-child:nth-last-child(n+2),
+  [class] body .autogrid.max-col-2 > *:first-child:nth-last-child(n+2) ~ *:nth-child(2n+1),
+  .autogrid > *:first-child:nth-last-child(n+2) ~ *:nth-child(2n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 3---------------------*/
+  [class] body .autogrid.max-col-3 > *:first-child:nth-last-child(n+3), .autogrid > *:first-child:nth-last-child(n+3), [class] body .autogrid.max-col-3 > *:first-child:nth-last-child(n+3) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+3) ~ * {
+    width: 32.6666666667%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-3 > *:first-child:nth-last-child(n+3),
+  .autogrid > *:first-child:nth-last-child(n+3),
+  [class] body .autogrid.max-col-3 > *:first-child:nth-last-child(n+3) ~ *:nth-child(3n+1),
+  .autogrid > *:first-child:nth-last-child(n+3) ~ *:nth-child(3n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 4---------------------*/
+  [class] body .autogrid.max-col-4 > *:first-child:nth-last-child(n+4), .autogrid > *:first-child:nth-last-child(n+4), [class] body .autogrid.max-col-4 > *:first-child:nth-last-child(n+4) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+4) ~ * {
+    width: 24.25%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-4 > *:first-child:nth-last-child(n+4),
+  .autogrid > *:first-child:nth-last-child(n+4),
+  [class] body .autogrid.max-col-4 > *:first-child:nth-last-child(n+4) ~ *:nth-child(4n+1),
+  .autogrid > *:first-child:nth-last-child(n+4) ~ *:nth-child(4n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 5---------------------*/
+  [class] body .autogrid.max-col-5 > *:first-child:nth-last-child(n+5), .autogrid > *:first-child:nth-last-child(n+5), [class] body .autogrid.max-col-5 > *:first-child:nth-last-child(n+5) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+5) ~ * {
+    width: 19.2%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-5 > *:first-child:nth-last-child(n+5),
+  .autogrid > *:first-child:nth-last-child(n+5),
+  [class] body .autogrid.max-col-5 > *:first-child:nth-last-child(n+5) ~ *:nth-child(5n+1),
+  .autogrid > *:first-child:nth-last-child(n+5) ~ *:nth-child(5n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 6---------------------*/
+  [class] body .autogrid.max-col-6 > *:first-child:nth-last-child(n+6), .autogrid > *:first-child:nth-last-child(n+6), [class] body .autogrid.max-col-6 > *:first-child:nth-last-child(n+6) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+6) ~ * {
+    width: 15.8333333333%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-6 > *:first-child:nth-last-child(n+6),
+  .autogrid > *:first-child:nth-last-child(n+6),
+  [class] body .autogrid.max-col-6 > *:first-child:nth-last-child(n+6) ~ *:nth-child(6n+1),
+  .autogrid > *:first-child:nth-last-child(n+6) ~ *:nth-child(6n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 7---------------------*/
+  [class] body .autogrid.max-col-7 > *:first-child:nth-last-child(n+7), .autogrid > *:first-child:nth-last-child(n+7), [class] body .autogrid.max-col-7 > *:first-child:nth-last-child(n+7) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+7) ~ * {
+    width: 13.4285714286%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-7 > *:first-child:nth-last-child(n+7),
+  .autogrid > *:first-child:nth-last-child(n+7),
+  [class] body .autogrid.max-col-7 > *:first-child:nth-last-child(n+7) ~ *:nth-child(7n+1),
+  .autogrid > *:first-child:nth-last-child(n+7) ~ *:nth-child(7n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 8---------------------*/
+  [class] body .autogrid.max-col-8 > *:first-child:nth-last-child(n+8), .autogrid > *:first-child:nth-last-child(n+8), [class] body .autogrid.max-col-8 > *:first-child:nth-last-child(n+8) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+8) ~ * {
+    width: 11.625%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-8 > *:first-child:nth-last-child(n+8),
+  .autogrid > *:first-child:nth-last-child(n+8),
+  [class] body .autogrid.max-col-8 > *:first-child:nth-last-child(n+8) ~ *:nth-child(8n+1),
+  .autogrid > *:first-child:nth-last-child(n+8) ~ *:nth-child(8n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 9---------------------*/
+  [class] body .autogrid.max-col-9 > *:first-child:nth-last-child(n+9), .autogrid > *:first-child:nth-last-child(n+9), [class] body .autogrid.max-col-9 > *:first-child:nth-last-child(n+9) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+9) ~ * {
+    width: 10.2222222222%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-9 > *:first-child:nth-last-child(n+9),
+  .autogrid > *:first-child:nth-last-child(n+9),
+  [class] body .autogrid.max-col-9 > *:first-child:nth-last-child(n+9) ~ *:nth-child(9n+1),
+  .autogrid > *:first-child:nth-last-child(n+9) ~ *:nth-child(9n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 10---------------------*/
+  [class] body .autogrid.max-col-10 > *:first-child:nth-last-child(n+10), .autogrid > *:first-child:nth-last-child(n+10), [class] body .autogrid.max-col-10 > *:first-child:nth-last-child(n+10) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+10) ~ * {
+    width: 9.1%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-10 > *:first-child:nth-last-child(n+10),
+  .autogrid > *:first-child:nth-last-child(n+10),
+  [class] body .autogrid.max-col-10 > *:first-child:nth-last-child(n+10) ~ *:nth-child(10n+1),
+  .autogrid > *:first-child:nth-last-child(n+10) ~ *:nth-child(10n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 11---------------------*/
+  [class] body .autogrid.max-col-11 > *:first-child:nth-last-child(n+11), .autogrid > *:first-child:nth-last-child(n+11), [class] body .autogrid.max-col-11 > *:first-child:nth-last-child(n+11) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+11) ~ * {
+    width: 8.1818181818%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-11 > *:first-child:nth-last-child(n+11),
+  .autogrid > *:first-child:nth-last-child(n+11),
+  [class] body .autogrid.max-col-11 > *:first-child:nth-last-child(n+11) ~ *:nth-child(11n+1),
+  .autogrid > *:first-child:nth-last-child(n+11) ~ *:nth-child(11n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  /*------------------MAX COL 12---------------------*/
+  [class] body .autogrid.max-col-12 > *:first-child:nth-last-child(n+12), .autogrid > *:first-child:nth-last-child(n+12), [class] body .autogrid.max-col-12 > *:first-child:nth-last-child(n+12) ~ *, [class] .autogrid > *:first-child:nth-last-child(n+12) ~ * {
+    width: 7.4166666667%;
+    clear: inherit;
+    margin-left: 1%;
+  }
+
+  [class] body .autogrid.max-col-12 > *:first-child:nth-last-child(n+12),
+  .autogrid > *:first-child:nth-last-child(n+12),
+  [class] body .autogrid.max-col-12 > *:first-child:nth-last-child(n+12) ~ *:nth-child(12n+1),
+  .autogrid > *:first-child:nth-last-child(n+12) ~ *:nth-child(12n+1) {
+    margin-left: 0;
+    clear: both;
+  }
+
+  @media (max-width: 900px) {
+    .autogrid > *:first-child:nth-last-child(n+3), [class] .autogrid > *:first-child:nth-last-child(n+3) ~ * {
+      width: 32.6666666667% !important;
+      clear: inherit !important;
+      margin-left: 1% !important;
+    }
+
+    .autogrid > *:first-child:nth-last-child(n+3),
+    .autogrid > *:first-child:nth-last-child(n+3) ~ *:nth-child(3n+1) {
+      margin-left: 0 !important;
+      clear: both !important;
+    }
+
+    [class] body .autogrid.max-col-2 > *:first-child:nth-last-child(n+2),
+    [class] body .autogrid.max-col-2 > *:first-child:nth-last-child(n+2) ~ * {
+      width: 49.5% !important;
+      clear: inherit !important;
+      margin-left: 1% !important;
+    }
+
+    [class] body .max-col-2 > *:first-child:nth-last-child(n+2),
+    [class] body .max-col-2 > *:first-child:nth-last-child(n+2) ~ *:nth-child(2n+1) {
+      margin-left: 0 !important;
+      clear: both !important;
+    }
+  }
+  @media (max-width: 600px) {
+    html[class] body .autogrid > *:first-child:nth-child(n), html[class] body .autogrid > *:nth-child(n) + *:nth-child(n) {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+  }
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #3E4651;
+    font-family: Arial,sans-serif;
+    color: #fff;
+  }
+
+  h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2em;
+  }
+
+  .controls {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .control {
+    margin: 0 20px;
+  }
+
+  button {
+    background: #1AAB8A;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 40px;
+    font-size: 1.1em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+  }
+
+  select {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 1.1em;
+    outline: none;
+    border: none;
+  }

@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Neural Network Creator</title>
+
+  <!-- 
+    This project coded for Advanced Artificial Intelligence Class, 2019
+    Supervisor: Dr. Bülent Haznedar
+    Hasan Kalyoncu University
+  -->
+
+
+  <!-- libraries -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <!--------------->
+
+  <script src="js/weights.js"></script>
+  <script src="js/layer-conf.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/neural.css">
+  <script src="js/neuron-lines.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/layer-conf.css">
+
+</head>
+<body>
+ <svg width="100%" style="position: absolute;">
+
+ </svg>
+ <h1>Online Neural Network Creator</h1>
+
+ <div class="container-fluid">
+
+  <br><br>
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="form-group">
+        <label>Data</label>
+        <textarea id="veri" style="width: 100%" rows="20"></textarea>
+        <input type="file" name="veriseti" id="veriseti" accept=".txt" title="Veri seti seçiniz."  onchange='openFile(event)'>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="form-group">
+        <label>Data Conf</label>
+        <div>
+          Input count:&nbsp;&nbsp;&nbsp;<input style="width: 60px" value="1" min="1" onkeydown="return false" type="number" name="inputcount" id="inputcount" onchange="inputtik(this)">
+        </div>
+        <br>
+        <div>
+          Output count:<input style="width: 60px" value="1" type="number" name="outputdegeri" onkeydown="return false" id="outputdegeri" onchange="outputtik(this)">
+        </div>
+
+      </div>        
+    </div>
+    <div class="col-lg-3">
+      <div class="form-group">
+        <label>Hidden Layer Conf</label>
+        <div class="control-group" id="fields">
+          <div class="controls">
+            <div id="form" aria-autocomplete="none">
+              <div class="entry">                           
+                <div class="input-group">
+                  <span class="layercount">1</span>.&nbsp;Layer&nbsp;-&nbsp;Neuron&nbsp;Count:&nbsp;&nbsp;&nbsp;&nbsp;<input style="width: 50px;max-height: 25px;" value="1" onkeydown="return false"  onchange="hiddentik(this)" type="number" name="neuralcount" id="neuralcount" class="neuralcount"> 
+
+                  <span class="input-group-btn">
+                    <button class="btn btn-success btn-add btn-xs" style="max-height: 25px;" type="button">
+                      <span class="fa fa-plus fa-xs"></span>
+                    </button>
+                  </span>
+                </div>
+                <div style="text-align: left;">
+                  <label class="radio-inline" style="font-weight: normal !important">
+                    <input type="radio" id="optradio" class="optradio" name="optradio1" value="tansig" checked>tansig
+                  </label>&nbsp;&nbsp;
+                  <label class="radio-inline" style="font-weight: normal !important">
+                    <input type="radio" id="optradio" class="optradio" name="optradio1" value="logsig">logsig
+                  </label>&nbsp;&nbsp;
+                  <label class="radio-inline" style="font-weight: normal !important">
+                    <input type="radio" id="optradio" class="optradio" name="optradio1" value="purelin">purelin
+                  </label>
+                </div>  
+                <br><br>
+              </div> 
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="form-group">
+        <label>Weights</label>
+        <div>         
+          <textarea id="weightsTextarea" style="width: 100%" rows="20"></textarea>
+        </div>
+      </div>
+    </div>  
+    <div class="col-lg-1">
+      <label><br></label><br>
+      <div style="margin-top:10px">
+        <button id="random" class="btn btn-warning btn-block" onclick="setWeight()">Weight</button>
+      </div>
+      <div style="padding-top: 20px">
+        <button id="graphic" class="btn btn-primary btn-block" onclick="createLines()">Graphic</button>
+      </div>
+      <div style="padding-top: 20px">
+       <button id="run" class="btn btn-succes btn-block"  onclick="inputOutputText()">Run</button>
+     </div>
+     <div style="padding-top: 20px">
+      <button id="reset" class="btn btn-danger btn-block" onclick="resetAll()">Reset</button>          
+    </div>
+
+  </div>
+
+</div>
+</div>
+<br>
+<hr>
+<div style="padding-left: 20px">
+  <br>
+  <span>Neuron Count: <label id="neuronCountLabel">3</label></span>&nbsp;|&nbsp;<span>Weith Count: <label id="weightCountLabel">3</label></span> 
+</div>
+
+
+<ul class="autogrid max-col-" style="padding-top: 50px;">
+  <li class="inputlayer"><div><center class="asd"><p>1</p></center></div></li>
+  <li class="hiddenlayer"><div><center class="asd"><p>1</p></center></div></li>
+  <li class="outputlayer"><div><center class="asd"><p>1</p></center></div></li>
+</ul>
+
+
+<div class="container-fluid" style="float:right;">
+  <br><br>
+  <div class="row">
+    <div class="col-lg-3">
+      <label>Input Value:</label>
+      <textarea id="area1" style="width: 100%" rows="20"></textarea>
+    </div>
+    <div class="col-lg-3">
+      <label>Output Value:</label>
+      <textarea id="area2" style="width: 100%" rows="20"></textarea>
+    </div>
+    <div class="col-lg-3">
+      <label>Calculated Value:</label>
+      <textarea id="area3" style="width: 100%" rows="20"></textarea>
+    </div>
+    <div class="col-lg-3">
+      <label>Error:</label>
+      <textarea id="area4" style="width: 100%" rows="20"></textarea>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

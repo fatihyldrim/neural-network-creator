@@ -1,0 +1,45 @@
+label{
+	font-weight: bold;
+}
+.btn-xs{
+	padding: .145rem .75rem !important;
+}
+.controls {
+	padding: 10px 0 !important;
+}
+
+textarea,input{
+	background-color: #787c82;
+	border: 2px solid #f1654c;
+	border-radius: 10px;
+	color: white;
+	padding: 10px;
+}
+textarea {
+	margin-top: 10px;
+}
+.inputlayerneuron, .outputlayerneuron, .hiddenlayerneuron{
+	margin-top: 100px;
+}
+
+ul li{
+	display: block;
+	  height: auto;
+	  margin: auto;
+	  padding: 0;
+
+}
+ul li div{
+	display: inline-block;
+	vertical-align: middle;
+}
+ul li:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;       
+}
+line:hover{
+	stroke: white !important;
+	cursor: pointer;
+}
